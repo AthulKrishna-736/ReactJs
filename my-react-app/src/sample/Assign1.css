@@ -1,0 +1,16 @@
+.profile-card{
+    background-color: rgb(113, 175, 246);
+}
+
+h1{
+    color: white;
+    text-align: center;
+}
+
+body{
+    background-color: white;
+}
+p{
+    text-align: center;
+    padding-bottom: 20px;
+}
