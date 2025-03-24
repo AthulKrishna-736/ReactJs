@@ -29,3 +29,38 @@
 .nav__black{
     background-color: #111;
 }
+
+.nav__loginButton {
+    padding: 10px 15px; /* Padding for the button */
+    background-color: transparent; /* Red background color */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    margin-left: 15px; /* Space between logo and button */
+    transition: background-color 0.3s; /* Transition for hover effect */
+    position: absolute;
+    right: 100px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+
+}
+
+/* Hover effect for the login button */
+.nav__loginButton:hover {
+    background-color: #f40612; /* Darker red on hover */
+}
+
+
+.nav__left {
+    display: flex;
+    align-items: center; /* Center align items vertically */
+}
+
+.nav__username{
+    color: white;
+    position: absolute;
+    right: 200px;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}

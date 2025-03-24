@@ -1,9 +1,12 @@
 import React from 'react'
 import ReactDom from 'react-dom/client'
-import App from './netflixClone/App'
-
+import Counter from './sample/Sample'
 
 
 ReactDom.createRoot(document.getElementById('root')).render(
-  <App />
+  // <BrowserRouter>
+  //  <App />
+  // </BrowserRouter>
+  // <ToDoList />
+  <Counter/>
 ) 

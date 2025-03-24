@@ -1,76 +1,120 @@
-body{
-    background-color: hsl(0, 16%, 71%);
-}
-.to-do-list{
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    margin-top: 100px;
+body {
+    background: linear-gradient(to right, hsl(200, 100%, 50%), hsl(140, 80%, 40%));
 }
 
-h1{
+.to-do-list-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh;
+    flex-direction: column; /* Stack elements vertically */
+    padding: 20px; /* Add some padding */
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black for a vintage effect */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6); /* Soft shadow for depth */
+}
+
+.to-do-list {
+    background: rgba(255, 255, 255, 0.1); 
+    padding: 20px; /* Inner padding */
+    border-radius: 10px; /* Rounded corners for inner container */
+    backdrop-filter: blur(5px); /* Slight blur effect for the inner container */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Soft border for contrast */
+}
+
+
+h1 {
     font-size: 4rem;
+    color: white;
 }
 
-button{
+button {
     font-size: 1.7rem;
     font-weight: bold;
     padding: 10px 10px;
     color: white;
-    border: none;
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Match border color */
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease, backdrop-filter 0.5s ease;
+    backdrop-filter: blur(10px); /* Slight blur effect */
 }
 
-.add-button{
-    background-color: greenyellow;
+.add-button {
+    padding: 9px 20px;
+    margin-left: 3px;
+    background-color: rgba(0, 255, 127, 0.7); /* Slightly transparent green-yellow */
 }
 
-.add-button:hover{
-    background-color: aquamarine;
+.add-button:hover {
+    background-color: rgba(127, 255, 212, 0.7); /* Slightly transparent aquamarine */
 }
 
-.delete-button{
-    background-color: red;
-}
-.delete-button:hover{
-    background-color: rgb(228, 148, 148);
+.delete-button {
+    background-color: rgba(255, 0, 0, 0.7); /* Slightly transparent red */
 }
 
-.move-button{
-    background-color: aqua;
+.delete-button:hover {
+    background-color: rgba(228, 148, 148, 0.7); /* Slightly transparent light red */
 }
-.move-button:hover{
-    background-color: rgb(167, 232, 232);
-}
-input[type="text"]{
+
+input[type="text"] {
     font-size: 1.6rem;
     padding: 10px;
-    border: 2px solid burlywood;
-    color: rgb(14, 14, 14);
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Match the border color */
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+    color: white;
+    backdrop-filter: blur(10px); /* Increased blur effect */
+    border-radius: 5px;
+    outline: none;
+    transition: background-color 0.3s ease;
 }
 
-ol{
+input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.866); /* Set placeholder color to white */
+}
+
+input[type="text"]:focus {
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly brighter when focused */
+}
+
+ol {
     padding: 0;
 }
 
-li{
+li {
     font-size: 2rem;
-    font-weight: bold;
-    padding: 15px;
-    background-color: hsl(0, 0%, 97%);
-    margin-bottom: 10px;
-    border: 3px solid whitesmoke;
+    font-weight: 500;
+    color: white;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Match border color */
+    margin-top: 5px;
     border-radius: 5px;
     display: flex;
     align-items: center;
+    backdrop-filter: blur(10px); /* Blur effect for new list items */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow effect for list items */
 }
 
-.text{
+.completed .text {
+    text-decoration: line-through; /* Strikethrough for completed tasks */
+    color: rgb(32, 32, 32);
+
+}
+
+.complete-button{
+    padding: 0;
+    background: none;
+    border: none;
+    margin: 0;
+}
+
+.text {
     flex: 1;  
 }
 
-.delete-button,.move-button{
+.delete-button, .move-button {
     padding: 8px 12px;
     font-size: 1.4rem;
     margin-left: 10px;   
